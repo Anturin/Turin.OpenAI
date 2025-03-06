@@ -24,10 +24,10 @@ namespace Turin.OpenAI
         public OpenAiClient(string apiKey)
         {
             _apiKey = apiKey;
-            var client = new HttpClient();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
-            client.Timeout = TimeSpan.FromMinutes(30);
+            httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+            httpClient.Timeout = TimeSpan.FromMinutes(30);
         }
 
         protected List<OpenAiMessageInfo> _messages = new List<OpenAiMessageInfo>();
