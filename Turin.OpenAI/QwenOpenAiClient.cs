@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Turin.OpenAI.Models;
 
 namespace Turin.OpenAI
 {
@@ -17,4 +16,5 @@ namespace Turin.OpenAI
             return "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
         }
     }
+
 }

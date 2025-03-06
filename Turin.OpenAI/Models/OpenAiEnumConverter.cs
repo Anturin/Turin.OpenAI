@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
@@ -43,6 +46,26 @@ namespace Turin.OpenAI.Models
         public OpenAiEnumConverter()
         {
             NamingStrategy = new OpenAiEnumNamingStrategy();
+        }
+
+        public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
+        {
+            if (value == null)
+            {
+                writer.WriteNull();
+                return;
+            }
+            else
+            {
+                var field = value.GetType().GetField(value.ToString());
+                var attr = field.GetCustomAttribute<EnumValueAttribute>();
+                if (attr != null)
+                {
+                    writer.WriteValue(attr.Value);
+                    return;
+                }
+            }
+            base.WriteJson(writer, value, serializer);
         }
     }
 }

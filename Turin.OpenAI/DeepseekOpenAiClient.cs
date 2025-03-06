@@ -1,5 +1,3 @@
-﻿using Turin.OpenAI.Models;
-
 namespace Turin.OpenAI
 {
     /// <summary>
