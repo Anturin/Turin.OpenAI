@@ -3,9 +3,7 @@ using Newtonsoft.Json;
 namespace Turin.OpenAI.Models;
 
 [JsonConverter(typeof(OpenAiEnumConverter))]
-public enum OpenAiRole
+public enum DeepseekAiModel
 {
-    system,
-    user,
-    assistant
+    DeepseekChat,
 }
