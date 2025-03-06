@@ -3,3 +3,5 @@
 /Turin.OpenAI/bin
 /Turin.OpenAI.Test/obj
 /Turin.OpenAI.Test/bin
+/Turin.OpenAI/Properties/PublishProfiles
+*.user
