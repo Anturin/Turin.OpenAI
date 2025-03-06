@@ -1,8 +1,9 @@
-namespace Turin.OpenAI.Models;
-
-public class OpenAiMessageInfo
+namespace Turin.OpenAI.Models
 {
-    public OpenAiRole role { get; set; }
-    
-    public string content { get; set; }
+    public class OpenAiMessageInfo
+    {
+        public OpenAiRole role { get; set; }
+
+        public string content { get; set; }
+    }
 }

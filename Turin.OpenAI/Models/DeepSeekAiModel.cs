@@ -1,9 +1,10 @@
 using Newtonsoft.Json;
 
-namespace Turin.OpenAI.Models;
-
-[JsonConverter(typeof(OpenAiEnumConverter))]
-public enum DeepseekAiModel
+namespace Turin.OpenAI.Models
 {
-    DeepseekChat,
+    [JsonConverter(typeof(OpenAiEnumConverter))]
+    public enum DeepseekAiModel
+    {
+        DeepseekChat,
+    }
 }
