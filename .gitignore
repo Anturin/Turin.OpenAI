@@ -1,1 +1,5 @@
 /.vs
+/Turin.OpenAI/obj
+/Turin.OpenAI/bin
+/Turin.OpenAI.Test/obj
+/Turin.OpenAI.Test/bin
